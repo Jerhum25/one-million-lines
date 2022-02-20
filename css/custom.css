@@ -1,0 +1,208 @@
+/*GLOBAL RESET*/
+
+html, body, span, applet, object, iframe,
+blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, hgroup,
+menu, nav, output, ruby, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+body{
+    font-family: Arvo;
+    width: 1200px;
+    margin: auto;
+}
+nav{
+    height: 50px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu{
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu a{
+    color:rgb(233, 232, 232);
+    text-decoration: none;
+}
+
+#home{
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#home img:nth-child(1){
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.title{
+    width: 70%;
+    position: absolute;
+    top: 80px;
+    color: white;
+    text-align: center;
+}
+
+h1{
+    font-size: 50px;
+}
+
+.title p{
+    font-size: 19px;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.title :nth-child(3){
+    background: rgb(194, 74, 74);
+    width: 150px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.title i{
+    font-size: 12px;
+}
+
+.title i:nth-child(1){
+    margin-left: 10px;
+}
+
+
+#who{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2{
+    color: rgb(194, 74, 74);
+}
+
+.underline{
+    height: 1px;
+    width: 100px;
+    background: rgb(194, 74, 74);
+}
+
+#get-involved{
+    background: rgb(233, 232, 232);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description{
+    display: flex;
+    justify-content: space-around;
+}
+
+.description div{
+    margin-top: 20px;
+    width: 25%;
+}
+
+.description i{
+    color: white;
+    font-size: 40px;
+    background: black;
+    padding: 15px;
+    border-radius: 45px;
+}
+
+button{
+    font-size: 15px;
+    color: rgb(194, 74, 74);
+    padding: 5px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+footer{
+    height: 200px;
+    background: rgb(194, 74, 74);
+    color: white;
+    display: flex;
+    align-items: flex-end;
+}
+
+footer img{
+    margin-bottom: 30px;
+    margin-left: 80px;
+}
+
+#back-to-top{
+    font-size: 25px;
+    position: fixed;
+    bottom: 10px;
+    right: 370px;
+}
+
+#back-to-top i{
+    text-decoration: none;
+    color: black;
+}
