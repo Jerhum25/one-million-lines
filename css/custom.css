@@ -52,10 +52,10 @@ table {
 
 
 
-
+/* Début du code */
 body{
     font-family: Arvo;
-    width: 1200px;
+    width: 80%;
     margin: auto;
 }
 nav{
@@ -65,16 +65,17 @@ nav{
     align-items: center;
     justify-content: space-around;
 }
-
+#lab, #ch{
+    display: none;
+}
 .menu{
-    width: 270px;
     display: flex;
-    justify-content: space-between;
 }
 
 .menu a{
     color:rgb(233, 232, 232);
     text-decoration: none;
+    margin-left: 20px;
 }
 
 #home{
@@ -84,11 +85,14 @@ nav{
     margin-bottom: 30px;
 }
 
+.background{
+    height: 550px;
+    overflow: hidden;
+}
+
 #home img:nth-child(1){
-    height: 100%;
-    width: 100%;
+    width: 120%;
     object-fit: cover;
-    position: relative;
 }
 
 .title{
@@ -117,6 +121,7 @@ h1{
     margin: auto;
     margin-bottom: 20px;
     cursor: pointer;
+    border-radius: 3px;
 }
 
 .title i{
@@ -156,6 +161,10 @@ h2{
     align-items: center;
 }
 
+h3{
+    color: rgb(194, 74, 74);
+}
+
 .description{
     display: flex;
     justify-content: space-around;
@@ -167,16 +176,23 @@ h2{
 }
 
 .description i{
+    display: inline-flex;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
     color: white;
-    font-size: 40px;
+    font-size: 35px;
     background: black;
     padding: 15px;
-    border-radius: 45px;
+    border-radius: 60px;
 }
 
 button{
     font-size: 15px;
     color: rgb(194, 74, 74);
+    background: #fff;
     padding: 5px;
     margin-bottom: 30px;
     cursor: pointer;
@@ -188,6 +204,7 @@ footer{
     color: white;
     display: flex;
     align-items: flex-end;
+    position: relative;
 }
 
 footer img{
@@ -197,12 +214,166 @@ footer img{
 
 #back-to-top{
     font-size: 25px;
-    position: fixed;
-    bottom: 10px;
-    right: 370px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
 }
 
 #back-to-top i{
     text-decoration: none;
     color: black;
+}
+
+
+@media screen and (max-width: 991px){
+    body{
+        width: 100%;
+    }
+    .title{
+        width: 80%;
+    }
+    .title p{
+        width: 85%;
+    }
+    h1{
+        font-size: 40px;
+    }
+    .description{
+        flex-direction: column;
+    }
+    .description div{
+        width: 90%;
+        margin: auto;
+    }
+    #get-involved .underline{
+        margin-bottom: 30px;
+    }    
+}
+
+@media screen and (max-width: 767px){
+/* burger menu */
+    .menu{
+        flex-direction: column;
+        font-size: 15px;
+        background: #000;
+        position: absolute;
+        right: 0;
+        top: 50px;
+        z-index: 10;
+        transform: translate(400px);
+        transition: all .5s;
+    }
+    .menu a{
+        margin-left: 0;
+        padding: 25px;
+    }
+    #ch{
+        display: none;
+    }
+    nav #lab {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        cursor: pointer;
+        display: flex;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 3px;
+    }
+    nav #lab .ligne {
+        width: 20px;
+        height: 2px;
+        background: #fff;
+    }
+    nav #lab .ligne::before, nav #lab .ligne::after {
+        content: "";
+        width: 20px;
+        height: 2px;
+        background: #fff;
+        position: absolute;
+    }
+    nav #lab .ligne::before {
+        transform: translateY(-7px);
+        transition: 0.3s;
+    }
+    nav #lab .ligne::after {
+        transform: translateY(7px);
+        transition: 0.3s;
+    }
+    nav #ch:checked + #lab .ligne {
+        width: 0;
+        transition: 0.3s;
+    }
+    nav #ch:checked + #lab .ligne::before {
+        transform: rotate(45deg) translatex(-6px) translateY(6px);
+        transition: 0.3s;
+        
+    }
+    nav #ch:checked + #lab .ligne::after {
+        transform: rotate(-45deg) translatex(6px) translateY(-6px);
+        transition: 0.3s;
+    }
+    nav #ch:checked + #lab + .menu {
+        transform: translate(0);
+        transition: all 0.5s;
+    }
+/* fin burger menu */
+    nav{
+        padding: 0 10px;
+        justify-content: space-between;
+    }
+    nav #logo img{
+        width: 150px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    #home{
+        height: 300px;
+    }
+    .background{
+        height: 300px;
+    }
+    .title{
+        width: 95%;
+        top: 45px;
+    }
+    .title p{
+        font-size: 14px;
+        width: auto;
+    }
+    .title :nth-child(3){
+        width: 110px;
+    }
+    .title img{
+        width: 40px;
+    }
+    #who, #get-involved{
+        width: auto;
+        padding: 0 10px;
+    }
+    #who img{
+        width: 100px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    #get-involved div{
+        width: auto;
+    }
+    .description i{
+        width: 30px;
+        height: 30px;
+        color: white;
+        font-size: 20px;
+        background: black;
+        padding: 10px;
+        border-radius: 60px;
+    }
+    footer img{
+        width: 200px;
+        margin-left: 20px;
+    }
 }
